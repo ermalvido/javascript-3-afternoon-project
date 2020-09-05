@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let str = ''
+  for(let key in obj) {
+    str = str + '' + obj[key]
+  }
+  return str
 }
 
 
@@ -53,7 +57,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10( obj ) {
+  for(let num in obj) {
+    if(obj[num] > 10) {
+      obj[num] = 0;
+    }
+  }
+  return obj;
+}
 
 
 
@@ -61,11 +72,16 @@ function showValues( obj ) {
 
 /*
   Write a function called double that takes in an object.
-  Write a for in loop that loops over the object and changes every value to be itself multipled by 2.
+  Write a for in loop that loops over the object and changes every value to be itself multiplied by 2.
   Return the updated object.
 */
 
-//Code Here
+function double( obj ) {
+  for(let twoTimes in obj) {
+    obj[twoTimes] = obj[twoTimes] * 2;
+  }
+  return obj;
+}
 
 
 
@@ -79,7 +95,15 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets( obj ) {
+  let str = ''
+  for(let key in obj) {
+    if(key.startsWith('sh')) {
+      str = str + '' + obj[key]
+    }
+  }
+  return str;
+}
 
 
 
